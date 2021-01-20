@@ -150,9 +150,9 @@ class IntegrationTestWidgetsFlutterBinding extends LiveTestWidgetsFlutterBinding
   ///
   /// The default value is `null`.
   @override
-  Map<String, dynamic> get reportData => _reportData;
-  Map<String, dynamic> _reportData;
-  set reportData(Map<String, dynamic> data) => this._reportData = data;
+  dynamic get reportData => _reportData;
+  dynamic _reportData;
+  set reportData(dynamic data) => this._reportData = data;
 
   /// Manages callbacks received from driver side and commands send to driver
   /// side.

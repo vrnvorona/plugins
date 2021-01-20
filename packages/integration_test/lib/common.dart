@@ -16,7 +16,7 @@ class Response {
   final bool _allTestsPassed;
 
   /// The extra information to be added along side the test result.
-  Map<String, dynamic> data;
+  dynamic data;
 
   /// Constructor to use for positive response.
   Response.allTestsPassed({this.data})
@@ -294,7 +294,7 @@ abstract class IntegrationTestResults {
   List<Failure> get failureMethodsDetails;
 
   /// The extra data for the reported result.
-  Map<String, dynamic> get reportData;
+  dynamic get reportData;
 
   /// Whether all the test methods completed succesfully.
   Completer<bool> get allTestsPassed;

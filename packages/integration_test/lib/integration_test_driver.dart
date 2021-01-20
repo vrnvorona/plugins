@@ -21,14 +21,14 @@ String testOutputsDirectory =
 
 /// The callback type to handle [integration_test.Response.data] after the test
 /// succeeds.
-typedef ResponseDataCallback = FutureOr<void> Function(Map<String, dynamic>);
+typedef ResponseDataCallback = FutureOr<void> Function(dynamic);
 
 /// Writes a json-serializable json data to to
 /// [testOutputsDirectory]/`testOutputFilename.json`.
 ///
 /// This is the default `responseDataCallback` in [integrationDriver].
 Future<void> writeResponseData(
-  Map<String, dynamic> data, {
+  dynamic data, {
   String testOutputFilename = 'integration_response_data',
   String destinationDirectory,
 }) async {
@@ -86,6 +86,6 @@ Future<void> integrationDriver({
 
 const JsonEncoder _prettyEncoder = JsonEncoder.withIndent('  ');
 
-String _encodeJson(Map<String, dynamic> jsonObject, bool pretty) {
+String _encodeJson(dynamic jsonObject, bool pretty) {
   return pretty ? _prettyEncoder.convert(jsonObject) : json.encode(jsonObject);
 }
