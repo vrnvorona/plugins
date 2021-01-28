@@ -17,12 +17,19 @@ dev_dependencies:
     sdk: flutter
   flutter_driver:
     sdk: flutter
-  integration_test:
-    path: ../
+  integration_test: any
   integration_test_macos:
     path: ../integration_test_macos
-  test: any
+#  test: any
   pedantic: ^1.8.0
+
+  flutter_gherkin:
+    git:
+      url: https://github.com/jonsamwell/flutter_gherkin
+      ref: ef04fa338678ffb59833ebf6affdff2189a8a21c
+
+  build_runner: any
+
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
